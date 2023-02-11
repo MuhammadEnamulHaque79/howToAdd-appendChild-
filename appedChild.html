@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppendChild</title>
+</head>
+<body>
+    <h2 id="default-text">Yes, I can!!</h2>
+    <input type="text" placeholder="input text" id="input-text">
+    <button id="btn-update">update button</button>
+
+    <script>
+        document.getElementById('btn-update').addEventListener('click',function(){
+            // console.log('update btn clicked');
+            const inputField=document.getElementById('input-text');
+            // console.log(inputField.value);
+            const expectedText = inputField.value;
+            // console.log(expectedText);
+            const updatedText = document.getElementById('default-text');
+            updatedText.innerText = expectedText;
+            inputField.value = '';
+
+
+
+        });
+
+    </script>
+    <script src="appendChild.js"></script>
+</body>
+</html>

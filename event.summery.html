@@ -9,7 +9,9 @@
 </head>
 
 <body>
-    <h2 id="default-text">Default input text</h2>
+
+  
+    <p id="default-text">Default input text</p>
     <input id="input-field" type="text">
     <button id="update-btn">update btn</button>
 
@@ -18,6 +20,7 @@
     <button onclick="eventHandlerAdd()">Click Me</button>
     <button id="eventHandler">eventHandler</button>
     <button id="headingClick">headingTextChanging</button>
+    
     <script>
         //option-1;
         function eventHandlerAdd() {
@@ -35,17 +38,17 @@
             const headingChanged = document.getElementById('heading');
             headingChanged.innerText = 'patience,hard work,dedication';
         })
-
         document.getElementById('update-btn').addEventListener('click',function(){
-            // console.log('update=btn-clicked');
+            // console.log('update btn clicked');
             const inputField=document.getElementById('input-field');
-           const inputText = inputField.value;
-           const updateText=document.getElementById('default-text');
-           updateText.innerText= inputText;
-           inputField.value='';
-
-
+            // console.log(inputField.value);
+            const inputText=inputField.value;
+            const updateText = document.getElementById('default-text');
+            // console.log(updateText);
+            updateText.innerText=inputText;
+            inputField.value = '';
         })
+
 
     </script>
 
