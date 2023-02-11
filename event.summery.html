@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event summery</title>
+</head>
+
+<body>
+    <h2 id="default-text">Default input text</h2>
+    <input id="input-field" type="text">
+    <button id="update-btn">update btn</button>
+
+    <h1 id="heading">eventHandler add</h1>
+    <h2 id="text">default text</h2>
+    <button onclick="eventHandlerAdd()">Click Me</button>
+    <button id="eventHandler">eventHandler</button>
+    <button id="headingClick">headingTextChanging</button>
+    <script>
+        //option-1;
+        function eventHandlerAdd() {
+            const event = document.getElementById('text');
+            event.innerText = 'Yes, I can.Go ahead';
+        }
+        //option-2;
+        document.getElementById('eventHandler').addEventListener('click', function () {
+            const textChanged = document.getElementById('text');
+            textChanged.innerText = "Yes, You can.be more patience";
+
+        })
+
+        document.getElementById('headingClick').addEventListener('click', function () {
+            const headingChanged = document.getElementById('heading');
+            headingChanged.innerText = 'patience,hard work,dedication';
+        })
+
+        document.getElementById('update-btn').addEventListener('click',function(){
+            // console.log('update=btn-clicked');
+            const inputField=document.getElementById('input-field');
+           const inputText = inputField.value;
+           const updateText=document.getElementById('default-text');
+           updateText.innerText= inputText;
+           inputField.value='';
+
+
+        })
+
+    </script>
+
+    <script src="event.summery.js"></script>
+</body>
+
+</html>
